@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Экранная клавиатура</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="input-container">
+			<input v-model='input'></input>
+			<button v-if="input !== ''" class="clear" @click="clear">✖</button>
+			<button @click="switchKeyboard">⌨</button>
+			<div 
+			class="keyboard" 
+			:Style="positionStyle"
+			v-if="keyboard.show"
+			>
+				<div class="header">
+					<div class="handle" v-on:mousedown="mouseDown">
+						Экранная клавиатура
+					</div>
+					<div class="close" @click="switchKeyboard">
+					✗
+					</div>
+				</div>
+				<div class="keys">
+					<button
+					v-for="key in keyboard.keys"
+					:Style='key.getStyle()'
+					:class="key.getClass(keyboard.shift, keyboard.caps)"
+					tabindex="-1"
+					@click="keyClick(key.getKey(keyboard.shift, keyboard.caps))"
+					>{{ key.getKey(keyboard.shift, keyboard.caps) }}</button>
+				<div>
+			</div>
+		</div>
+		
+
+	</div>
+<script src="main.js"></script>
+</body>
+</html>

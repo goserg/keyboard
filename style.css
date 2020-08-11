@@ -1,0 +1,99 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
+}
+
+.input-container {
+	height: 3rem;
+	border: solid 1px #ddd;
+	border-radius: 1.5rem;
+	padding: 0 1.5rem;
+	display: flex;
+	margin: 2rem;
+}
+.input-container:focus-within,
+.input-container:hover {
+	box-shadow: 0 0 20px #ddd;
+}
+
+.input-container input {
+	height: 100%;
+	width: 100%;
+	border: 0;
+	outline: 0;
+	font-size: 1.3rem;
+}
+.input-container button {
+	height: 100%;
+	border: 0;
+	outline: 0;
+	font-size: 1.3rem;
+	background: transparent;
+	cursor: pointer;
+	margin-left: 0.5rem;
+}
+.clear {
+	padding-right: 0.8rem;
+	border-right: solid 1px #ddd !important;
+}
+
+.keyboard {
+	position: fixed;
+	width: 517px;
+	height: 220px;
+	border: solid 1px #999;
+	background: #fff;
+	box-shadow: 0 0 10px #bbb;
+	left: 0;
+	top: 0;
+	cursor: default;
+	padding: 10px;
+	z-index: 1000;
+	
+	
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
+
+.keyboard button {
+	width: 29px; /* убрать после введения объектов кнопок */
+	height: 29px;
+	margin: 2px;
+	font-size: 14px;
+	border: 1px solid #999;
+	border-radius: 2px;
+}
+.keyboard button:hover {
+	box-shadow: 0 1px #ccc;
+	border-color: #666;
+}
+.keyboard button:focus {
+	outline: 0;
+}
+.keyboard .blank {
+	visibility: hidden;
+	width: 45.5px;
+}
+.pressed {
+	background-color: #555 !important;
+	color: #fff;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+.handle {
+	cursor: move;
+	width: 100%;
+	padding: 5px;
+}
+.close {
+	padding: 5px;
+	color: #777;
+}
+.close:hover {
+	color: #000;
+}
