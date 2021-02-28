@@ -1,1 +1,1 @@
-![login-register.gif](screenshots/login-register.gif?raw=true "login-register")
+![keyboard.gif](screenshots/keyboard.gif?raw=true "keyboard")
